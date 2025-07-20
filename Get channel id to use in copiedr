@@ -1,0 +1,8 @@
+from telethon.sync import TelegramClient
+
+api_id = 28403662
+api_hash = '079509d4ac7f209a1a58facd00d6ff5a'
+
+with TelegramClient('anon', api_id, api_hash) as client:
+    for dialog in client.iter_dialogs():
+        print(f"{dialog.name} — {dialog.id}")
